@@ -1,44 +1,142 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: url('../img/background.png') no-repeat center center fixed;
+            /* #f9f4e6; Soft cream color */
+    color: #3b0a45; /* Dark burgundy for text */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-size: 16px;
+    line-height: 1.6;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
 }
 
 header {
-    background-color: #333;
-    padding: 30px 30px;
+    background: #800020; /* Burgundy color */
+    color: #fff; /* White text for contrast */
+    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-header .logo {
-    width: 100px;
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #f2d200; /* Gold color */
 }
 
-nav a {
+.logo a {
     text-decoration: none;
-    color: white;
-    margin: 0 15px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    color: #f2d200; /* Gold color */
+    transition: color 0.3s ease;
 }
 
-nav a:hover {
-    background-color: #e44100;
+.logo a:hover {
+    color: #ffd700; /* Lighter gold on hover */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 30px;
+}
+
+nav ul li {
+    margin: 0 20px;
+    font-size: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* White text for navigation */
+    font-size: 1em;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Gold hover effect */
+}
+
+.container {
+    text-align: center;
+    max-width: 800px;
+    margin: 80px auto;
+}
+
+h1 {
+    font-size: 5em;
+    margin-bottom: 20px;
+    color: #ffffff; /* White color */
+    font-weight: 700;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Adds shadow behind text */
+}
+
+p {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+    color: #ffffff; /* Dark burgundy color */
+    background-color: #800020;
+    padding: 5px; 
+    text-decoration: none; 
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1.2em;
+    color: rgb(0, 0, 0);
+    background-color: #f9f4e6; /* Burgundy */
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #f2d200; /* Gold on hover */
+    transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+footer {
+    background: #800020; /* Burgundy color */
     color: #fff;
+    text-align: center;
+    padding: 5px;
+    margin-top: auto;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-nav a:active {
-    background-color: #2243ad;
+footer p {
+    font-size: 1em;
+    color: #ffffff; /* Gold color */
 }
 
-header .logo {
-    max-width: 100%;
-    height: auto;
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+        padding-top: 10px;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    .container {
+        margin-top: 60px;
+    }
 }
