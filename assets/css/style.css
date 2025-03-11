@@ -1,0 +1,231 @@
+/* Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #c5984a; /* #f9f4e6; Soft cream color */
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #800020;
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 10;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #f2d200; /* Gold color */
+    margin-right: 10px; /* Space between logo and h1 */
+}
+
+.logo a {
+    text-decoration: none;
+    color: #f2d200; /* Gold color */
+    transition: color 0.3s ease;
+}
+
+.container h1 {
+    margin: 0; /* Adjust space between the logo and the h1 */
+    font-size: 2em;
+    display: inline-block;
+    color: white;
+}
+
+.container h1:hover {
+    color: #ffd700; /* Gold hover effect */
+}
+
+nav {
+    margin-left: auto;
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+    font-size: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+/* When the hamburger menu is open, change the background color */
+nav.active ul {
+    background-color: #f9f4e6; /* Soft Cream Color */
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+/* Change text color when menu expands */
+nav.active ul li a {
+    color: #800020; /* Dark red text for contrast */
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Gold hover effect */
+}
+
+/* Hero Section */
+.hero {
+    background: url('../img/bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero-content h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background: gold;
+    color: #800020;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background: #daa520;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Hamburger Button */
+.hamburger {
+    display: none; /* Hide on large screens */
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* ================= RESPONSIVE DESIGN ================== */
+
+/* 🌟 Extra Large Screens (4K Displays) */
+@media (min-width: 1800px) {
+    .container {
+        max-width: 1600px;
+    }
+    .hero-content h2 {
+        font-size: 60px;
+    }
+    .hero-content p {
+        font-size: 24px;
+    }
+}
+
+/* 💻 Large Screens (Desktops & Laptops) */
+@media (min-width: 1200px) and (max-width: 1799px) {
+    .hero-content h2 {
+        font-size: 50px;
+    }
+    .hero-content p {
+        font-size: 20px;
+    }
+}
+
+/* 📱 Medium Screens (Tablets) */
+@media (max-width: 1024px) {
+    .container {
+        width: 95%;
+    }
+    .hero-content h2 {
+        font-size: 35px;
+    }
+    .hero-content p {
+        font-size: 16px;
+    }
+}
+
+/* Small Screens (Mobile) */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show on small screens */
+    }
+
+    nav {
+        display: none; /* Hide nav initially */
+        width: 100%;
+        background: #800020;
+        position: absolute;
+        top: 60px; /* Adjust according to header height */
+        left: 0;
+        text-align: center;
+        padding: 10px 0;
+        z-index: 100;
+    }
+
+    nav.active {
+        display: block; /* Show when active */
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Extra Small Screens (Mobile Phones) */
+@media (max-width: 480px) {
+    .hero-content h2 {
+        font-size: 24px;
+    }
+    .hero-content p {
+        font-size: 12px;
+    }
+}

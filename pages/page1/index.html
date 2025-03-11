@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets\css\style.css">
+    <title>PezMor - About Us</title>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="../../assets/img/logov2.png" alt="PezMor" width="50">
+                </a>
+            </div>
+            <a href="index.html">
+                <h1>PezMor</h1>
+            </a>
+
+            <!-- Hamburger Button -->
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+
+            <!-- Navigation Menu -->
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="../../index.html"><strong>Home</strong></a></li>
+                    <li><a href="index.html"><strong>About</strong></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Us --->
+    <section class="about">
+        <div class="container about-content">
+            <div class="text-section">
+                <h5 class="highlight">CULINARY ADVENTURE AWAITS</h5>
+                <h2>Discover, Share, Savor</h2>
+                <p>
+                    PezMor is designed for travelers and food lovers seeking authentic dining experiences. Our app helps you discover hidden gems, plan food-inspired trips, and share honest reviews. Based in Manila, Philippines, we offer curated restaurant discovery, travel planning, and user-generated reviews to elevate your foodie experience. Our platform connects culinary explorers with authentic dining experiences worldwide, and interactive food maps.
+                </p>
+                <p>
+                    Join our community to submit your food evaluations, locate dishes globally, 
+                    and share your insights, all while enjoying the trust of admin-verified authenticity.
+                </p>
+                <a href="#" class="contact-link">Get in touch</a>
+            </div>
+            <div class="image-section">
+                <img src="../../assets/img/about.png" alt="Culinary Experience">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 PezMor. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JS for Hamburger -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector("#nav-menu");
+
+        hamburger.addEventListener("click", function () {
+            navMenu.classList.toggle("active");
+        });
+    });
+    </script>
+</body>
+</html>
