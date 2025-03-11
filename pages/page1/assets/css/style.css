@@ -1,147 +1,313 @@
+/* Reset & Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: #f9f4e6;;
-            /* #f9f4e6; Soft cream color */
-    color: #3b0a45; /* Dark burgundy for text */
+    background-color: #f9f4e6; /*  Soft cream color */
+    color: #333;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-size: 16px;
-    line-height: 1.6;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    width: 100%;
-    height: 100vh;
 }
 
+/* Header */
 header {
-    background: #800020; /* Burgundy color */
-    color: #fff; /* White text for contrast */
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #800020;
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 10;
 }
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .logo {
-    margin-left: 20px;
+    font-size: 1.8em;
     font-weight: bold;
     color: #f2d200; /* Gold color */
+    margin-right: 10px; /* Space between logo and h1 */
 }
+
 .logo a {
     text-decoration: none;
     color: #f2d200; /* Gold color */
     transition: color 0.3s ease;
 }
+
+.container h1 {
+    margin: 0; /* Adjust space between the logo and the h1 */
+    font-size: 2em;
+    display: inline-block;
+    color: white;
+}
+
+
+.container h1:hover {
+    color: #ffd700; /* Gold hover effect */
+}
+
+nav {
+    margin-left: auto;
+    display: block;
+}
+
 nav ul {
     list-style: none;
     display: flex;
-    margin-right: 30px;
 }
+
 nav ul li {
-    margin: 0 20px;
+    margin: 0 15px;
     font-size: 20px;
 }
+
 nav ul li a {
+    color: white;
     text-decoration: none;
-    color: #fff; /* White text for navigation */
-    font-size: 1em;
-    font-weight: 500;
+    font-size: 16px;
+    display: block;
     transition: color 0.3s ease;
 }
-nav ul li a:hover {
-    color: #ffd700;
+
+/* About Page */
+.about {
+    padding: 100px 0;
 }
-.about-container {
+
+.about-content {
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    margin-top: 50px;
+    justify-content: center;
     gap: 50px;
+    flex-wrap: wrap;
     width: 90%;
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #f9f4e6;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
 }
-h1 {
-    text-align: center;
-    padding-top: 30px;
+
+.text-section {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    text-align: left;
+}
+
+.text-section h5 {
+    font-size: 20px;
+    color: #2d7a21;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.text-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.text-section p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.contact-link {
+    color: #333;
+    text-decoration: underline;
     font-weight: bold;
 }
-.profile-box {
-    background: white;
-    border-radius: 30px;
-    padding: 60px;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 800px;
-    min-width: 300px;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
-    flex-wrap: wrap;
-}
-.profile-box img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin-right: 20px;
-}
-.profile-box .details {
-    color: #333;
+
+.image-section {
     flex: 1;
-    min-width: 250px;
+    text-align: center;
+    min-width: 300px;
+    max-width: 500px;
 }
-.profile-box h2 {
-    color: black;
-    margin-bottom: 15px;
-    font-size: 2em;
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    border-radius: 20px;
 }
-.profile-box p {
-    color: gray;
-    font-size: 1.2em;
+
+/* When the hamburger menu is open, change the background color */
+nav.active ul {
+    background-color: #f9f4e6; /* Soft Cream Color */
+    padding: 10px 0;
+    border-radius: 5px;
 }
+
+/* Change text color when menu expands */
+nav.active ul li a {
+    color: #800020; /* Dark red text for contrast */
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Gold hover effect */
+}
+
+/* Footer */
 footer {
-    background: #800020;
+    background: #333;
     color: white;
     text-align: center;
-    padding: 20px;
-    margin-top: 50px;
+    padding: 15px 0;
+    width: 100%;
+    margin-top: auto;
 }
-footer p {
-    font-size: 1em;
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Hamburger Button */
+.hamburger {
+    display: none; /* Hide on large screens */
+    font-size: 28px;
+    background: none;
+    border: none;
     color: white;
+    cursor: pointer;
 }
-@media (max-width: 900px) {
-    .profile-box {
-        flex-direction: column;
+
+/* ================= RESPONSIVE DESIGN ================== */
+
+/* 🌟 Extra Large Screens (4K Displays) */
+@media (min-width: 1800px) {
+    .container {
+        max-width: 1600px;
+    }
+    .hero-content h2 {
+        font-size: 60px;
+    }
+    .hero-content p {
+        font-size: 24px;
+    }
+}
+
+/* 💻 Large Screens (Desktops & Laptops) */
+@media (min-width: 1200px) and (max-width: 1799px) {
+    .hero-content h2 {
+        font-size: 50px;
+    }
+    .hero-content p {
+        font-size: 20px;
+    }
+}
+
+/* 📱 Medium Screens (Tablets) */
+@media (max-width: 1024px) {
+    .container {
+        width: 95%;
+    }
+    .hero-content h2 {
+        font-size: 35px;
+    }
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    /* About */
+    .about-content {
+        flex-direction: column; /* Stack content */
         text-align: center;
-        padding: 40px;
+        padding: 30px;
     }
-    .profile-box img {
-        margin-bottom: 20px;
-        margin-right: 0;
+
+    .text-section {
+        order: 1; /* Text first */
+        width: 80%;
     }
-    .about-container {
-        flex-direction: column;
+
+    .image-section {
+        order: 2; /* Image below */
+        width: 80%;
     }
-    header {
-        flex-direction: column;
+
+    .image-section img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Small Screens (Mobile) */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show on small screens */
+    }
+
+    nav {
+        display: none; /* Hide nav initially */
+        width: 100%;
+        background: #800020;
+        position: absolute;
+        top: 60px; /* Adjust according to header height */
+        left: 0;
         text-align: center;
+        padding: 10px 0;
+        z-index: 100;
     }
+
+    nav.active {
+        display: block; /* Show when active */
+    }
+
     nav ul {
         flex-direction: column;
-        padding-top: 10px;
     }
+
     nav ul li {
         margin: 10px 0;
+    }
+
+    /* About */
+    .about-content {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+    }
+
+    .text-section {
+        order: 1; /* Ensure text appears first */
+        width: 95%;  /* Make text container wider */
+        max-width: 600px; /* Prevent it from getting too narrow */
+        font-size: 18px; /* Keep text readable */
+        line-height: 1.6; /* Improve spacing */
+        word-break: normal; /* Prevent breaking mid-word */
+        hyphens: auto; /* Improve word wrapping naturally */
+    }
+
+    .image-section {
+        order: 2; /* Image appears below the text */
+    }
+
+    .image-section img {
+        max-width: 90%;
+        height: auto;
+    }
+}
+
+/* Extra Small Screens (Mobile Phones) */
+@media (max-width: 480px) {
+    .hero-content h2 {
+        font-size: 24px;
+    }
+    .hero-content p {
+        font-size: 12px;
     }
 }

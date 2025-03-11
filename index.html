@@ -4,29 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>PezMor</title>
+    <title>PezMor - Discover & Share Culinary Adventures</title>
 </head>
 <body>
+    <!-- Header & Navigation -->
     <header>
-        <div class="logo">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/img/logov2.png" alt="PezMor" width="50">
+                </a>
+            </div>
             <a href="index.html">
-              <img src="Logo/logo.png" alt="PezMor Logo" width="75">
+                <h1>PezMor</h1>
             </a>
-          </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pages/page1/index.html">About</a></li>
-            </ul>
-        </nav>
+
+            <!-- Hamburger Button -->
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+
+            <!-- Navigation Menu -->
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html"><strong>Home</strong></a></li>
+                    <li><a href="pages/page1/index.html"><strong>About</strong></a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <div class="container">
-        <h1>Welcome to PezMor</h1>
-        <p><strong>Savor the World, One Bite at a Time.</strong></p>
-        <a href="#" class="btn">Get Started</a>
-    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Discover. Savor. Share Your Culinary Adventures</h2>
+            <p>Find the best restaurants, explore new cuisines, and connect with fellow food lovers worldwide.</p>
+            <a href="#" class="cta-button">VIEW SERVICES</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 PezMor. All Rights Reserved.</p>
     </footer>
+
+    <!-- JS for Hamburger -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector("#nav-menu");
+
+        hamburger.addEventListener("click", function () {
+            navMenu.classList.toggle("active");
+        });
+    });
+    </script>
 </body>
 </html>
